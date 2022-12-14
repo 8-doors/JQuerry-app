@@ -17,7 +17,7 @@
     opacity: .75;
 }
 
-#input {
+#input, .input {
     display: inline;
     max-width: fit-content;
     max-height: 15px;
