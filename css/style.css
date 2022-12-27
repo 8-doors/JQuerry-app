@@ -27,3 +27,12 @@
 h1 {
     display: inline;
 }
+
+.cross {
+    text-decoration: line-through;
+}
+
+.delete {
+    display: none;
+}
+

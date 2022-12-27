@@ -1,13 +1,22 @@
-function addNew(){
-    let li = $('<li></li>');
-    let input = $('#input').val();
-    li.append(input);
+let li = $('<li></li>');
+let input = $('#input');
 
-    if (input === '') {
+function addNew(){
+    li.append(input.val());
+
+    if (input.val() === '') {
         alert("You can't add nothing to the list!!!");        
     }else {
-        let list = $('#list');
-        list.append(li);
+        $('#list').append(li);
     }
-}    
+};   
 
+function cross() {
+    li.addClass(".cross");
+};
+
+li.on('click', function cross() {
+    li.addClass(".cross");
+});
+
+let crossButt = $('<button></button>');
