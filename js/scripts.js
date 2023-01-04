@@ -1,7 +1,7 @@
-let li = $('<li></li>');
-let input = $('#input');
-
 function addNew(){
+    let li = $('<li></li>');
+    let input = $('#input');
+
     li.append(input.val());
 
     if (input.val() === '') {
@@ -9,14 +9,25 @@ function addNew(){
     }else {
         $('#list').append(li);
     }
+
+    function cross() {
+        li.addClass("cross");
+    };
+
+    li.on('dblclick',cross);
+
+    let crossButt = $('<crossButton></crossButton>');
+
+    crossButt.append(document.createTextNode("X"));
+    li.append(crossButt);
+
+    function deleteIt(){
+        li.addClass("del")
+    };
+
+    crossButt.on("click", deleteIt)
+
+   
 };   
 
-function cross() {
-    li.addClass(".cross");
-};
-
-li.on('click', function cross() {
-    li.addClass(".cross");
-});
-
-let crossButt = $('<button></button>');
+$('#list').sortable();
