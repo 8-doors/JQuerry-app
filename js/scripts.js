@@ -30,6 +30,4 @@ function addNew(){
    
 };   
 
-
-
 $('#list').sortable();
